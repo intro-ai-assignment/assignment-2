@@ -143,8 +143,7 @@ def select_move(cur_state: State_2, remain_time):
     valid_moves = cur_state.get_valid_moves
     search_state = State_2(cur_state)
     search_state.free_move = cur_state.free_move
-    # logger.info(f"Search state: {search_state}")
-    if cur_state.player_to_move == 1:
+    if cur_state.player_to_move == X:
         maximize = True
     else:
         maximize = False
